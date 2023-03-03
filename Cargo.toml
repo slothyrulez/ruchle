@@ -1,0 +1,15 @@
+[package]
+name = "ruchle"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "ruchle_rust"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.18.0", features = ["extension-module"] }
+pyo3-log = {version = "0.8.1"}
+log = { version = "0.4.17"}
+rand = { version = "0.8.5"}

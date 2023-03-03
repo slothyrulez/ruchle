@@ -1,0 +1,43 @@
+[build-system]
+requires = ["maturin>=0.14,<0.15"]
+build-backend = "maturin"
+
+[project]
+name = "ruchle"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+
+[tool.maturin]
+python-source = "python"
+
+
+[tool.poetry]
+name = "ruchle"
+version = "0.1.0"
+description = ""
+authors = ["slothy <slothyrulez@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+rich = "^13.3.1"
+maturin = "^0.14.13"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.10.0"
+ruff = "^0.0.247"
+mypy = "^1.0.1"
+ipdb = "^0.13.11"
+black = "^23.1.0"
+
+[tool.poetry.scripts]
+ruchle = "ruchle:main"
+
+[tool.ruff]
+select = ["F", "E", "W", "I001"]
+line-length = 120
